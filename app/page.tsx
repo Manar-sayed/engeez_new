@@ -13,7 +13,6 @@ import Head from 'next/head';
 import { useForm } from 'react-hook-form';
 import FormHome from '../components/FormHome';
 import LandingPage from '../components/LandingPage';
-import Modules from '../components/Modules';
 import axios from 'axios';
 import Layout from './layout';
 
@@ -31,7 +30,6 @@ export default function Home({ Component }: any) {
 
     <>
       <p>
-        mnnnnnnnnnnnn
       </p>
 
     </>

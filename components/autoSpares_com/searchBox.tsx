@@ -76,112 +76,119 @@ function SearchBox() {
 
 
   return (
-    <div className='absolute  z-10 w-[70%]'>
+    <div className='absolute  z-10 xl:w-[60%]' id='1'>
       <Card className='text-center'>
         <CardHeader>
           <CardTitle className='text-lg md:text-xl lg:text-3xl text-green-400 font-bold'>اوجد قطع غيار لسيارتك</CardTitle>
           <CardDescription>اكثر من عشرات البراندات والالاف قطع الغيار</CardDescription>
         </CardHeader>
-        <CardContent className='flex justify-around ' dir='rtl'>
+        <CardContent className='flex justify-center gap-2 md:justify-around md:gap-0' dir='rtl'>
 
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="flex justify-around  w-full">
+              <div className=' grid grid-cols-2 gap-3 sm:flex'>
+                {/* carType */}
+                <FormField
+                  control={form.control}
+                  name="carType"
+                  render={({ field }) => (
+                    <FormItem>
 
-              {/* carType */}
-              <FormField
-                control={form.control}
-                name="carType"
-                render={({ field }) => (
-                  <FormItem>
-
-                    <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl >
-                        <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 text-white">
-                          <SelectValue >{field.value}</SelectValue>
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="apple">car 1</SelectItem>
-                        <SelectItem value="banana">car 2</SelectItem>
-                      </SelectContent>
-                    </Select>
-
-
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {/* year */}
-              <FormField
-                control={form.control}
-                name="year"
-                render={({ field }) => (
-                  <FormItem>
-                    <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 text-white">
-                          <SelectValue >{field.value}</SelectValue>
-
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="apple">2023</SelectItem>
-                        <SelectItem value="banana">2022</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="model"
-                render={({ field }) => (
-                  <FormItem>
-
-                    <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 opacity-40 text-white">
-                          <SelectValue >{field.value}</SelectValue>
-
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="apple">موديل 1</SelectItem>
-                        <SelectItem value="banana">موديل 2</SelectItem>
-                      </SelectContent>
-                    </Select>
+                      <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl >
+                          <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 text-white">
+                            <SelectValue >{field.value}</SelectValue>
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="apple">car 1</SelectItem>
+                          <SelectItem value="banana">car 2</SelectItem>
+                        </SelectContent>
+                      </Select>
 
 
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="engine"
-                render={({ field }) => (
-                  <FormItem>
-                    <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 opacity-40 text-white">
-                          <SelectValue >{field.value}</SelectValue>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                {/* year */}
+                <FormField
+                  control={form.control}
+                  name="year"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 text-white">
+                            <SelectValue >{field.value}</SelectValue>
 
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="apple">type 1</SelectItem>
-                        <SelectItem value="banana">type 2</SelectItem>
-                      </SelectContent>
-                    </Select>
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="apple">2023</SelectItem>
+                          <SelectItem value="banana">2022</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="model"
+                  render={({ field }) => (
+                    <FormItem>
+
+                      <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 opacity-40 text-white">
+                            <SelectValue >{field.value}</SelectValue>
+
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="apple">موديل 1</SelectItem>
+                          <SelectItem value="banana">موديل 2</SelectItem>
+                        </SelectContent>
+                      </Select>
 
 
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-       <Button type='submit' className='bg-green-400  '>بحث</Button>
-             </form>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="engine"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 opacity-40 text-white">
+                            <SelectValue >{field.value}</SelectValue>
+
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="apple">type 1</SelectItem>
+                          <SelectItem value="banana">type 2</SelectItem>
+                        </SelectContent>
+                      </Select>
+
+
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div className='flex justify-center items-center'>
+                <Button type='submit' className='bg-green-400 hover:bg-transparent 
+                                                   hover:border hover:border-green-400
+                                                 hover:text-green-400 w-24 mx-3'
+                >بحث</Button>
+
+              </div>
+            </form>
           </Form>
 
         </CardContent>

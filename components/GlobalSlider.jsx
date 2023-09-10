@@ -5,8 +5,7 @@ import 'react-slideshow-image/dist/styles.css';
 import DaleelInfo from './DaleelInfo'
 import React, { useState } from 'react';
 import SearchBox from '../components/autoSpares_com/searchBox'
-// import '../app/(pages)/styles.css'
-// import '@/app/globals.css'
+
 const GlobalSlider = ({
   title,
   firstDesc,
@@ -24,7 +23,6 @@ const GlobalSlider = ({
   //These are custom properties for zoom effect while slide-show
   const Properties = {
     indicators: true,
-    // scale: 1.2,
     duration: 5000,
     transitionDuration: 500,
     infinite: true,
@@ -46,8 +44,7 @@ const GlobalSlider = ({
 
 
   return (
-    <div >
-
+    <div>
       <Fade {...Properties}>
         {Images.map((each, index) => (
           <div
@@ -83,7 +80,7 @@ const GlobalSlider = ({
         ))}
       </Fade>
       {isAutoSpares && (
-        <div className='flex justify-center items-center '>
+        <div className='flex justify-center items-center'>
           <SearchBox></SearchBox>
         </div>
 
