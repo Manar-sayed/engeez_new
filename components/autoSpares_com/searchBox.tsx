@@ -32,6 +32,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+import AutoComplete from '../autoComplete';
 
 const FormSchema = z.object({
   carType: z
@@ -73,28 +74,38 @@ function SearchBox() {
     console.log(data)
   }
 
-
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+  ];
+  const [selectedOption, setSelectedOption] = useState();
+  const [isClearable, setIsClearable] = useState(true);
 
   return (
-    <div className='absolute  z-10 xl:w-[60%]' id='1'>
+    <div className=''>
       <Card className='text-center'>
         <CardHeader>
           <CardTitle className='text-lg md:text-xl lg:text-3xl text-green-400 font-bold'>اوجد قطع غيار لسيارتك</CardTitle>
           <CardDescription>اكثر من عشرات البراندات والالاف قطع الغيار</CardDescription>
         </CardHeader>
         <CardContent className='flex justify-center gap-2 md:justify-around md:gap-0' dir='rtl'>
-
+        <AutoComplete></AutoComplete>
+{/* 
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="flex justify-around  w-full">
               <div className=' grid grid-cols-2 gap-3 sm:flex'>
-                {/* carType */}
                 <FormField
                   control={form.control}
                   name="carType"
                   render={({ field }) => (
                     <FormItem>
 
-                      <Select dir='rtl' onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select dir='rtl' 
+                      
+                      onValueChange={field.onChange} 
+                      defaultValue={selectedOption}
+                      >
                         <FormControl >
                           <SelectTrigger className="w-[100px] lg:w-[150px] bg-green-400 text-white">
                             <SelectValue >{field.value}</SelectValue>
@@ -105,13 +116,10 @@ function SearchBox() {
                           <SelectItem value="banana">car 2</SelectItem>
                         </SelectContent>
                       </Select>
-
-
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                {/* year */}
                 <FormField
                   control={form.control}
                   name="year"
@@ -189,7 +197,7 @@ function SearchBox() {
 
               </div>
             </form>
-          </Form>
+          </Form> */}
 
         </CardContent>
 

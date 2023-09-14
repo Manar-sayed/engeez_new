@@ -10,6 +10,7 @@ import CarsTypes from '@/components/autoSpares_com/carsTypes'
 import BestSeller from '@/components/autoSpares_com/bestSeller'
 import MaintCenters from '@/components/autoSpares_com/MaintCenters'
 import Departments from '@/app/departments/page'
+import Best_Seller from '@/app/bestSeller/page'
 const Images = [
   {
     url: `${autoImg1.src}`,
@@ -42,9 +43,9 @@ function AutoSpares() {
 
       {/* الأقسام */}
       <center>
-      <Departments/>
+        <Departments />
       </center>
-      {/* <Departments/> */}
+
       {/*انواع السيارات */}
       <div className='my-7'>
         <Label className='flex justify-end text-green-400 text-xl md:text-3xl xl:text-4xl font-bold m-7'>
@@ -56,33 +57,20 @@ function AutoSpares() {
       </div>
 
       {/* الاكثر مبيعا*/}
-      <div className='my-7'>
-        <div className='flex justify-between'>
-        <Label className='flex justify-end ps-3 text-green-400 text-xs font-light md:text-lg xl:text-xl  m-7'>
-         المزيد 
-        </Label>
-        <Label className='flex justify-end text-green-400 text-base md:text-3xl xl:text-4xl font-bold m-7'>
-        الاكثر مبيعا 
-        </Label>
-      
-        </div>
-        <center className='mx-5 xl:mx-0'>
-          <BestSeller />
-        </center>
-      </div>
+      <center>
+        <Best_Seller />
+      </center>
 
       {/* مراكز الصيانة */}
       <div className='my-7'>
         <div className='flex justify-between'>
-        <Label className='flex justify-end ps-3 text-green-400 text-xs font-light md:text-lg xl:text-xl  m-7'>
-         المزيد 
-        </Label>
-        <Label className='flex justify-end text-green-400 text-base md:text-3xl xl:text-4xl font-bold m-7'>
-        مراكز الصيانة  
-        </Label>
-      
+          <Label className='flex justify-end ps-3 text-green-400 text-xs font-light md:text-lg xl:text-xl  m-7'>
+            المزيد
+          </Label>
+          <Label className='flex justify-end text-green-400 text-base md:text-3xl xl:text-4xl font-bold m-7'>
+            مراكز الصيانة
+          </Label>
         </div>
-
         <center className='mx-5 xl:mx-0'>
           <MaintCenters />
         </center>

@@ -15,9 +15,11 @@ export default function Page() {
   console.log("id->", id)
 
   return (
-    <div className='mt-36 text-4xl  mx-10'>
-      <div className="text-green-400  text-[32px] my-7  font-bold flex justify-end">{deptname}</div>
+    <div className='mt-36 text-4xl  mb-7'>
+      <div className="text-green-400 mx-10  text-[32px] my-7  font-bold flex justify-end">{deptname}</div>
+      <center className=''>
       <DynamicDept></DynamicDept>
+      </center>
 
 
     </div>

@@ -14,6 +14,7 @@ import 'swiper/css/pagination';
 import Depts_card from './depts_card';
 import BestSellerCard from './bestSellerCard';
 import DynamicDept_card from './dynamicDept_card';
+import Link from 'next/link';
 const depts_swiper = [
     {
       image: `${dept1.src}`,
@@ -85,16 +86,19 @@ const depts_swiper = [
 function DynamicDept() {
   return (
     <>
-    <div className=' grid grid-cols-3 gap-3 xl:gap-0'>
+    <div className=' grid grid-cols-3 gap-7 mx-20'>
     {depts_swiper.map((card, index) =>
           <DynamicDept_card
             imageSrc={card.image}
             title={card.title} 
             description={card.description}
+            id={index}
+            key={index}
             />
       )}
 
     </div>
+    
     {/* <Swiper
  
       slidesPerView={3}

@@ -4,13 +4,20 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import free from '../public/images/00.jpeg';
 import '@/app/globals.css'
-function DaleelInfo({ title, firstDesc, seconDesc, isSupAtathcom }) {
+function DaleelInfo({ title, firstDesc, seconDesc, isSupAtathcom,
+  isBtn,
+  isDaleel,
+  isWatercom,
+  isGascom,
+  isItSolution
+ }:any) {
   const router = useRouter();
   const pathname = usePathname();
 
   return (
     <div
-      className={`max-w-full py-4 w-[90%] md:w-1/2 flex justify-center items-center flex-col z-10 rounded-sm bg-white bg-opacity-90 shadow-md border border-neutral-300'
+      className={`max-w-full py-4 w-[90%] md:w-1/2 flex justify-center items-center flex-col absolute z-10
+       rounded-sm bg-white bg-opacity-90 shadow-md border border-neutral-300'
       `}
     >
       <h1
@@ -47,7 +54,8 @@ function DaleelInfo({ title, firstDesc, seconDesc, isSupAtathcom }) {
           </Link>
           <div className='w-[60px] h-[60px]'>
           <Image src={free} 
-           alt={'free'} />
+           alt={'free'}
+            />
 
           </div>
         </div>

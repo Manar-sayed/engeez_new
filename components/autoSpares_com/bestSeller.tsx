@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Pagination, Autoplay } from 'swiper/modules';
 import dept1 from '@/public/images/dept1.png'
@@ -11,7 +10,6 @@ import dept6 from '@/public/images/dept6.png'
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
-import Depts_card from './depts_card';
 import BestSellerCard from './bestSellerCard';
 const depts_swiper = [
     {
@@ -63,6 +61,8 @@ function BestSeller() {
             imageSrc={card.image}
             title={card.title} 
             description={card.description}
+            id={index}
+            showIcons={true}
             />
         </SwiperSlide>
       )}

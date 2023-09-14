@@ -2,15 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Pagination, Autoplay } from 'swiper/modules';
-import carType1  from '@/public/images/autoSpares/toyota.png';
-import carType2  from '@/public/images/autoSpares/honda.png';
-import carType3  from '@/public/images/autoSpares/nissan.png';
-import carType4  from '@/public/images/autoSpares/ford.png';
-import carType5  from '@/public/images/autoSpares/hun.png';
-import carType6  from '@/public/images/autoSpares/suzuki.png';
-import carType7  from '@/public/images/autoSpares/mercedes.png';
-import carType8  from '@/public/images/autoSpares/chevrolet.png';
-import carType9  from '@/public/images/autoSpares/ladi.png';
+import carType1 from '@/public/images/autoSpares/toyota.png';
+import carType2 from '@/public/images/autoSpares/honda.png';
+import carType3 from '@/public/images/autoSpares/nissan.png';
+import carType4 from '@/public/images/autoSpares/ford.png';
+import carType5 from '@/public/images/autoSpares/hun.png';
+import carType6 from '@/public/images/autoSpares/suzuki.png';
+import carType7 from '@/public/images/autoSpares/mercedes.png';
+import carType8 from '@/public/images/autoSpares/chevrolet.png';
+import carType9 from '@/public/images/autoSpares/ladi.png';
 import carType10 from '@/public/images/autoSpares/bmw.png';
 import carType11 from '@/public/images/autoSpares/mazoa.png';
 import carType12 from '@/public/images/autoSpares/lexus.png';
@@ -92,25 +92,25 @@ function CarsTypes() {
                 modules={[Grid, Pagination, Autoplay]}
                 className="flex justify-center w-[95%] bg-white"
                 grid={{
-                    rows: 5,    
+                    rows: 5,
                     fill: 'row',
                 }}
             >
                 {depts_swiper.map((type, index) =>
                     <SwiperSlide key={index} className=''>
-                        {/* <div className="w-56 h-32 "> */}
-                        <Image
-                            className=" w-60 h-60"
-                            src={type.image}
-                            alt={'image'}
-                            width={100}
-                            height={100}
-                            quality={100}
-                            layout='responsive'
-                            priority={true}
-                        >
-                        </Image>
-                        {/* </div> */}
+                        <div className="md:w-60 md:h-60">
+                            <Image
+                                className="w-[100%] h-"
+                                src={type.image}
+                                alt={'image'}
+                                width={100}
+                                height={100}
+                                quality={100}
+                                priority={true}
+                            >
+                            </Image>
+
+                        </div>
                     </SwiperSlide>
                 )}
             </Swiper>

@@ -13,10 +13,9 @@ function MaintCentersCard({ imageSrc, description }: any) {
           <Image
             src={imageSrc}
             alt={'image'}
-            width={100}
-            height={100}
-            quality={100}
-            layout='responsive'
+            width={1000}
+            height={1000}
+            className='w-full h-full'
             priority={true}
           >
           </Image>
@@ -24,19 +23,16 @@ function MaintCentersCard({ imageSrc, description }: any) {
       </CardContent>
 
       <CardHeader className="flex justify-center items-center -mt-8 mb-3 lg:px-3">
-        
-
-        <CardDescription className="text-[8px] font-extralight md:text-sm lg:text-base  lg:text-justify  text-black " dir='rtl'>{description}</CardDescription>
-
+        <CardDescription className="text-[8px] font-extralight md:text-sm lg:text-base  lg:text-justify  text-black " dir='rtl'>
+          {description}
+        </CardDescription>
       </CardHeader>
       <Separator className='bg-gray-200 w-[100%]' />
-
       <CardFooter className=' flex justify-center items-end  pt-2 -mb-5 hover:text-green-400'>
-        
-          <Link href='/'>
-            المزيد
-          </Link>
-        </CardFooter>
+        <Link href='/'>
+          المزيد
+        </Link>
+      </CardFooter>
 
 
     </Card>
